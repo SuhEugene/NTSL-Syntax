@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "NTSL",
+	"patterns": [
+		{"include": "#comments"},
+		{"include": "#message_vars"},
+		{"include": "#strings"},
+		{"include": "#functions"},
+		{"include": "#user_functions"},
+		{"include": "#constant_functions"},
+		{"include": "#variables"},
+		{"include": "#values"},
+		{"include": "#numbers"}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [{
+				"name": "comment.ntsl",
+				"match": "(//).*$\\n?"
+			}]
+		},
+		"message_vars": {
+			"patterns": [{
+				"match": "(\\$source|\\$content|\\$freq|\\$job|\\$pass|\\$language|\\$common|\\$science|\\$command|\\$medical\\$engineering|\\$security|\\$supply|\\$service)\\b",
+				"name": "variable.language.ntsl"
+			}]
+		},
+		"strings": {
+			"patterns": [{
+				"begin": "\"",
+				"end": "\"",
+				"name": "string.ntsl"	
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"match": "\\b(if|else|elseif|def|return|while|break|continue)\\b",
+				"name": "keyword.control.ntsl"
+			}]
+		},
+		"constant_functions": {
+			"patterns": [{
+				"match": "\\b(vector|at|signal|broadcast|mem)\\b",
+				"name": "support.function.ntsl"
+			}]
+		},
+		"user_functions": {
+			"patterns": [{
+				"match": "\\b([\\w_]+)\\(",
+				"name": "support.function.ntsl"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"match": "(\\$[\\w_]+)\\b",
+				"name": "variable.name.ntsl"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"match": "(\\+|\\-|\\/|\\*|\\,|\\(|\\)|\\{|\\}|\\;|\\=|\\||\\&|\\~|\\^|\\!|\\%|\\<|\\>)",
+				"name": "keyword.operator.ntsl"
+			}]
+		},
+		"values": {
+			"patterns": [{
+				"match": "\\b(PI|E|SQURT2|FALSE|TRUE|NORTH|SOUTH|EAST|WEST)\\b",
+				"name": "storage.type.ntsl"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"match": "\\b(1|2|3|4|5|6|7|8|9|0)+\\b",
+				"name": "constant.numeric.ntsl"
+			}]
+		}
+	},
+	"scopeName": "source.ntsl"
+}
