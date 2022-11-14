@@ -4,7 +4,7 @@
   "description": "Syntax for NTSL language of SpaceStation13 game",
   "author": "SuhEugene",
   "license": "ISC",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.73.0"
   },
@@ -12,6 +12,7 @@
     "Programming Languages"
   ],
   "icon": "ntsl.png",
+  "publisher": "SuhEugene",
   "repository": {
     "type": "git",
     "url": "https://github.com/SuhEugene/NTSL-Syntax"
