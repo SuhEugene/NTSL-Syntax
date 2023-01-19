@@ -4,7 +4,7 @@
   "description": "Syntax for NTSL language of SpaceStation13 game",
   "author": "SuhEugene",
   "license": "ISC",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.73.0"
   },

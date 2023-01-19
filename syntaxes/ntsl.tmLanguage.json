@@ -15,8 +15,13 @@
 	"repository": {
 		"comments": {
 			"patterns": [{
-				"name": "comment.ntsl",
+				"name": "comment.line.ntsl",
 				"match": "(//).*$\\n?"
+			},
+			{
+				"name": "comment.block.ntsl",
+				"begin": "/\\*",
+				"end": "\\*/"
 			}]
 		},
 		"message_vars": {
